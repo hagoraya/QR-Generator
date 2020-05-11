@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-light: #F1FAEE;
+  --clr-light-blue: #A8DADC;
+  --clr-mid-blue: #457B9D;
+  --clr-dark-blue: #1D3557;
+  --clr-cream: #E3E7E7;
+  --clr-black: #302E2D;
+}
+
+body {
+  margin: 0;
+  background-size: cover;
+  overflow: hidden;
+  background-color: var(--clr-cream);
+  font-family: "PT Sans", sans-serif;
+  font-family: "Archivo Black", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  height: 100vh;
+}
+
+h1, h2, h3 {
+  line-height: 1;
+}
+
+.main-container {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  left: 50%;
+  top: 50%;
+  transform-origin: center;
+  background-color: var(--clr-light-blue);
+  width: 1000px;
+  height: 700px;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.info-text-div {
+  padding-left: 2rem;
+  padding-top: 10rem;
+  color: var(--clr-black);
+}
+
+.main-title {
+  padding-top: 1rem;
+  text-transform: uppercase;
+  font-size: xxx-large;
+}
+
+/*# sourceMappingURL=style.css.map */
