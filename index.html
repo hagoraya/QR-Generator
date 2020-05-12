@@ -17,49 +17,46 @@
 
 
 
-
-
 </head>
 
 <body>
     <main class="main-container">
         <div class="info-text-div">
             <h3 class="main-title">QR Generator</h3>
-            <p class="main-text">Hello Welcome to qr Generator</p>
-
-            <input type="text" id="qr-data" onkeypress="generateQR()">
+            <input type="text" id="qr-data" placeholder="Type here.." onkeyup="generateQR()">
+            <br>
+            <br>
+            <div id="qrcode"></div>
         </div>
-
-        <div id="qrcode"></div>
-
-
     </main>
+    <footer>
 
+    </footer>
 </body>
 
 <!-- scritps -->
 <script src="qrcode.min.js"></script>
 
 <script>
-
-
     var qrdata = document.getElementById('qr-data');
     var qrCode = new QRCode("qrcode", {
-        width: 128,
-        height: 128,
+        text: "hagoraya.com",
+        width: 250,
+        height: 250,
         colorDark: "#E3E7E7",
         colorLight: "#302E2D",
         correctLevel: QRCode.CorrectLevel.H
     })
 
     function generateQR() {
+        //   document.getElementById('notext').style.visibility = "hidden"
         var data = qrdata.value;
+        console.log(data)
+
         qrCode.makeCode(data);
-
     }
-
-
 </script>
+
 
 
 
